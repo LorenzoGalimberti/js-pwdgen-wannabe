@@ -24,3 +24,28 @@ ${passwordSimple}`
 );
 
 
+// sezione bonus
+
+
+let numeroUno = parseInt(prompt("inserisci un numero : "));
+let numeroDue = parseInt(prompt("inserisci un altro numero : "));
+
+let min, max;
+
+if (numeroUno <= numeroDue) {
+    min=numeroUno;
+    max=numeroDue;
+  } else {
+    max=numeroUno;
+    min=numeroDue;
+  }
+
+let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min; // Genera un numero casuale compreso tra min e max inclusi
+
+
+let passwordComplicated=nome+cognome+colorePreferito+randomNumber;
+
+console.log(`
+La password complessa sara'
+${passwordComplicated}`
+);
